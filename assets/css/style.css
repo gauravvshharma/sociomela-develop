@@ -1,7 +1,7 @@
 
 .logo-img{
   padding: 30px;
-  width: 200px;
+  width: 300px;
 }
 .rnOuter {
     overflow: hidden;
@@ -286,7 +286,18 @@
 .floating img {
   width: 100%; height: auto; }
 
-
+.p-0 {
+  padding: 0 !important;
+}
+.pb-0 {
+  padding-bottom: 0 !important;
+} 
+.p-5{
+  padding: 5% !important;
+}
+.p-10{
+  padding: 10% !important;
+}
   
   /* Draggable cord */
 :root {

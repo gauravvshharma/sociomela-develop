@@ -175,9 +175,8 @@
               <img src="assets/img/1st_balloon.png" alt="Balloon" style="width:100px"/>
             </div>
             <div class="row">
-              <div class="col-lg-8 text-content">
-                <h4>WHAT</h4>
-                <img src="assets/img/Text2.png" class="image-responsive border-bottom-red" style="padding: 5%"/>
+              <div class="col-lg-8 text-content p-5">
+                <img src="assets/img/Text2.png" class="image-responsive pb-0"/>
                 <h1>Creativity</h1>
               </div>
                 <div class="col-lg-4">
@@ -193,7 +192,7 @@
       </section>
     
      <!-- Section 5 -->
-     <section class="wrapper" style="background-image: url('assets/img/Roller.png');">
+     <section class="wrapper">
       <div class="content">
          <div class="brand">
       <div class="floating balloon1">
@@ -203,12 +202,11 @@
         <img src="assets/img/1st_balloon.png" alt="Balloon" style="width:100px"/>
       </div>
       <div class="row">
-        <div class="col-lg-4">
-          <img src="assets/img/Girl-Balancing-transparent.gif" class="video-responsive">
+        <div class="col-lg-6">
+          <img src="assets/img/Girl-Balancing-transparent.mp4" class="video-responsive">
         </div>
-        <div class="col-lg-8 text-content">
-          <h4>WHAT</h4>
-          <img src="assets/img/Text3.png" class="image-responsive border-bottom-red" style="padding: 2% 20%;"/>
+        <div class="col-lg-6 text-content">
+          <img src="assets/img/Text3.png" class="image-responsive pb-0"/>
           <h1>Deliver Perfection</h1>
         </div>
         </div>
@@ -216,114 +214,36 @@
        </div>
      </section>
 
+         
+     <!-- Section 5 -->
+     <section class="wrapper" style="background-image: url('assets/img/Roller.png');">
+      <div class="content">
+         <div class="brand">
+          <div class="floating balloon1">
+            <img src="assets/img/3rd_balloon.png" alt="Balloon"/>
+          </div>
+          <div class="floating balloon4">
+            <img src="assets/img/1st_balloon.png" alt="Balloon" style="width:100px"/>
+          </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="assets/img/Text4.png" class="image-responsive">
+        </div>
+        <div class="col-lg-6 text-content">
+          <img src="assets/img/Screen.png" class="image-responsive pb-0"/>
+          <img src="assets/img/Lights.png" class="image-responsive" style="position: relative; top: -325px;"/>
+        </div>
+        </div>
+         </div>
+       </div>
+     </section>
+
         <script src="assets/js/jquery.min.js" type="text/javascript" ></script>
-        <script src="https://unpkg.co/gsap@3/dist/gsap.min.js" type="text/javascript" ></script>
-        <script src="https://unpkg.com/gsap@3/dist/Draggable.min.js" type="text/javascript" ></script>
         <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.25.0" type="text/javascript" ></script>
         <script src="https://cdn.jsdelivr.net/npm/tsparticles-shape-confetti@1.10.0" type="text/javascript" ></script>
         <!-- Latest compiled and minified Bootstrap JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
  
-        <!-- <script> 
-           const {
-  gsap: { registerPlugin, set, to, timeline },
-  MorphSVGPlugin,
-  Draggable,
-} = window
-registerPlugin(MorphSVGPlugin)
-
-// Used to calculate distance of "tug"
-let startX
-let startY
-
-const AUDIO = {
-  CLICK: new Audio('https://assets.codepen.io/605876/click.mp3'),
-}
-const STATE = {
-  ON: false,
-}
-const CORD_DURATION = 0.1
-
-const CORDS = document.querySelectorAll('.toggle-scene__cord')
-const HIT = document.querySelector('.toggle-scene__hit-spot')
-const DUMMY = document.querySelector('.toggle-scene__dummy-cord')
-const DUMMY_CORD = document.querySelector('.toggle-scene__dummy-cord line')
-const PROXY = document.createElement('div')
-// set init position
-const ENDX = DUMMY_CORD.getAttribute('x2')
-const ENDY = DUMMY_CORD.getAttribute('y2')
-const RESET = () => {
-  set(PROXY, {
-    x: ENDX,
-    y: ENDY,
-  })
-}
-
-RESET()
-
-const CORD_TL = timeline({
-  paused: true,
-  onStart: () => {
-    STATE.ON = !STATE.ON
-    set(document.documentElement, { '--on': STATE.ON ? 1 : 0 })
-    set([DUMMY, HIT], { display: 'none' })
-    set(CORDS[0], { display: 'block' })
-    AUDIO.CLICK.play()
-  },
-  onComplete: () => {
-    set([DUMMY, HIT], { display: 'block' })
-    set(CORDS[0], { display: 'none' })
-    RESET()
-  },
-})
-
-for (let i = 1; i < CORDS.length; i++) {
-  CORD_TL.add(
-    to(CORDS[0], {
-      morphSVG: CORDS[i],
-      duration: CORD_DURATION,
-      repeat: 1,
-      yoyo: true,
-    })
-  )
-}
-
-Draggable.create(PROXY, {
-  trigger: HIT,
-  type: 'x,y',
-  onPress: e => {
-    startX = e.x
-    startY = e.y
-  },
-  onDrag: function() {
-    set(DUMMY_CORD, {
-      attr: {
-        x2: this.x,
-        y2: this.y,
-      },
-    })
-  },
-  onRelease: function(e) {
-    const DISTX = Math.abs(e.x - startX)
-    const DISTY = Math.abs(e.y - startY)
-    const TRAVELLED = Math.sqrt(DISTX * DISTX + DISTY * DISTY)
-    to(DUMMY_CORD, {
-      attr: { x2: ENDX, y2: ENDY },
-      duration: CORD_DURATION,
-      onComplete: () => {
-        if (TRAVELLED > 50) {
-          CORD_TL.restart()
-        } else {
-          RESET()
-        }
-      },
-    })
-  },
-})
-
-
-        </script> -->
-
         <script>
           tsParticles.load("tsparticles", {
   fpsLimit: 30,
