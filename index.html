@@ -180,7 +180,12 @@
                 <h1>Creativity</h1>
               </div>
                 <div class="col-lg-4">
-                  <img src="assets/img/monkey.mp4" class="video-responsive">
+                  <video  class="video-responsive" autoplay muted>
+                    <source src="assets/img/monkey.mp4" type="video/mp4" class="video-responsive">
+                   </video>
+                   <script>
+                    document.getElementByClassName('.video-responsive').play();
+                </script>
                 </div>
                 <div class="floating balloon5">
                   <img src="assets/img/2nd_balloon.png" alt="Balloon" style="width:35px"/>
@@ -203,8 +208,10 @@
       </div>
       <div class="row">
         <div class="col-lg-6">
-          <img src="assets/img/Girl-Balancing-transparent.mp4" class="video-responsive">
-        </div>
+          <video autoplay muted class="video-responsive">
+            <source src="assets/img/Girl-Balancing-transparent.mp4" type="video/mp4">
+           </video>
+          </div>
         <div class="col-lg-6 text-content">
           <img src="assets/img/Text3.png" class="image-responsive pb-0"/>
           <h1>Deliver Perfection</h1>
