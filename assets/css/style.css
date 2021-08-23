@@ -223,7 +223,10 @@
 }
 /* Fun begins */
 
-
+  .fun {
+    border-top: 10px solid gold;
+  }
+  
   .fun img{
     display: block;
     margin-left: auto;
