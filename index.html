@@ -226,7 +226,7 @@
      <section class="wrapper" style="background-image: url('assets/img/Roller.png'); margin-top: 60px;">
       <div class="content">
          <div class="brand">
-          <div class="floating balloon1">
+          <div class="floating balloon1" style="top:15px">
             <img src="assets/img/3rd_balloon.png" alt="Balloon"/>
           </div>
           <div class="floating balloon4">
@@ -237,16 +237,59 @@
           <img src="assets/img/Text4.png" class="image-responsive">
         </div>
         <div class="col-lg-6 text-content">
-          <img src="assets/img/Screen.png" class="image-responsive p-0"/>
-          <img src="assets/img/Lights.png" class="image-responsive" style="position: relative; top: -325px;"/>
-        </div>
-        </div>
-         </div>
-       </div>
-     </section>
+          <!-- Slider 1 -->
+<div class="slider portfolioSlider" id="slider1">
+  <!-- Slides -->
+  <div style="background-image:url(assets/img/slider_img/2-1.mp4)"></div>
+  <div style="background-image:url(assets/img/slider_img/1.mp4)"></div>
+  <div style="background-image:url(assets/img/slider_img/2.jpg)"></div>
+  <div style="background-image:url(assets/img/slider_img/6.jpg)"></div>
+  <div style="background-image:url(assets/img/slider_img/8.jpg)"></div>
+  <div style="background-image:url(assets/img/slider_img/51.jpg)"></div>
+  <div style="background-image:url(assets/img/slider_img/83.jpg)"></div>
+  <div style="background-image:url(assets/img/slider_img/hoc.jpg)"></div>
+  <div style="background-image:url(assets/img/slider_img/10.mp4)"></div>
+  <div style="background-image:url(assets/img/slider_img/7.mp4)"></div>
+  <div style="background-image:url(assets/img/slider_img/9.mp4)"></div>
+  <!-- The Arrows -->
+  <i class="left" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100" fill="#222222"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path></svg></i>
+  <i class="right" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100" fill="#222222"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path></svg></i>
+</div>
+  <div class="slider-bg">
+    <img src="assets/img/Screen.png" class="image-responsive p-0"/>
+    <img src="assets/img/Lights.png" class="image-responsive" style="position: relative; top: -350px;"/>
+  </div>
+</div>  
+</div>
+</div>
+</div>
+</section>
 
+<!-- Section 6 -->
+<section class="client-wrapper" style="background-image: url('assets/img/BG.jpg');">
+  <div class="row">
+    <div class="col-lg-12">     
+      <div class="client_text">
+        <img src="assets/img/client_text.png" class="image-responsive">
+      </div>                         
+      <section class="customerSlider slider"  id="slider2">
+        <div class="slide"><img src="assets/img/client_img/24x7 salon.png"></div>
+        <div class="slide"><img src="assets/img/client_img/Ad tech.png"></div>
+        <div class="slide"><img src="assets/img/client_img/Blackbucks.png"></div>
+        <div class="slide"><img src="assets/img/client_img/Chaichun.png"></div>
+        <div class="slide"><img src="assets/img/client_img/Garudda.png"></div>
+        <div class="slide"><img src="assets/img/client_img/Pizza.png"></div>
+        <div class="slide"><img src="assets/img/client_img/TOB.png"></div>
+        <div class="slide"><img src="assets/img/client_img/Tandoor villa.png"></div>
+     </section>
+    </div>
+  </div>
+</section>
+
+        <!-- Custom JS -->
         <script src="assets/js/jquery.min.js" type="text/javascript" ></script>
         <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.25.0" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/tsparticles-shape-confetti@1.10.0" type="text/javascript" ></script>
         <!-- Latest compiled and minified Bootstrap JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
@@ -352,6 +395,174 @@
           });
         });
         </script>
+
+<!-- Portfolio Slider JS -->
+
+<script>
+
+(function($) {
+  "use strict";
+  $.fn.sliderResponsive = function(settings) {
+    
+    var set = $.extend( 
+      {
+        slidePause: 5000,
+        fadeSpeed: 800,
+        autoPlay: "on",
+        showArrows: "off", 
+        hideDots: "on", 
+        hoverZoom: "on",
+        titleBarTop: "off"
+      },
+      settings
+    ); 
+    
+    var $slider = $(this);
+    var size = $slider.find("> div").length; //number of slides
+    var position = 0; // current position of carousal
+    var sliderIntervalID; // used to clear autoplay
+      
+    // Add a Dot for each slide
+    $slider.append("<ul></ul>");
+    $slider.find("> div").each(function(){
+      $slider.find("> ul").append('<li></li>');
+    });
+      
+    // Put .show on the first Slide
+    $slider.find("div:first-of-type").addClass("show");
+      
+    // Put .showLi on the first dot
+    $slider.find("li:first-of-type").addClass("showli")
+
+     //fadeout all items except .show
+    $slider.find("> div").not(".show").fadeOut();
+    
+    // If Autoplay is set to 'on' than start it
+    if (set.autoPlay === "on") {
+        startSlider(); 
+    } 
+    
+    // If showarrows is set to 'on' then don't hide them
+    if (set.showArrows === "on") {
+        $slider.addClass('showArrows'); 
+    }
+    
+    // If hideDots is set to 'on' then hide them
+    if (set.hideDots === "on") {
+        $slider.addClass('hideDots'); 
+    }
+    
+    // If hoverZoom is set to 'off' then stop it
+    if (set.hoverZoom === "off") {
+        $slider.addClass('hoverZoomOff'); 
+    }
+    
+    // If titleBarTop is set to 'on' then move it up
+    if (set.titleBarTop === "on") {
+        $slider.addClass('titleBarTop'); 
+    }
+
+    // function to start auto play
+    function startSlider() {
+      sliderIntervalID = setInterval(function() {
+        nextSlide();
+      }, set.slidePause);
+    }
+    
+    // on mouseover stop the autoplay
+    $slider.mouseover(function() {
+      if (set.autoPlay === "on") {
+        clearInterval(sliderIntervalID);
+      }
+    });
+      
+    // on mouseout starts the autoplay
+    $slider.mouseout(function() {
+      if (set.autoPlay === "on") {
+        startSlider();
+      }
+    });
+
+    //on right arrow click
+    $slider.find("> .right").click(nextSlide)
+
+    //on left arrow click
+    $slider.find("> .left").click(prevSlide);
+      
+    // Go to next slide
+    function nextSlide() {
+      position = $slider.find(".show").index() + 1;
+      if (position > size - 1) position = 0;
+      changeCarousel(position);
+    }
+    
+    // Go to previous slide
+    function prevSlide() {
+      position = $slider.find(".show").index() - 1;
+      if (position < 0) position = size - 1;
+      changeCarousel(position);
+    }
+
+    //when user clicks slider button
+    $slider.find(" > ul > li").click(function() {
+      position = $(this).index();
+      changeCarousel($(this).index());
+    });
+
+    //this changes the image and button selection
+    function changeCarousel() {
+      $slider.find(".show").removeClass("show").fadeOut();
+      $slider
+        .find("> div")
+        .eq(position)
+        .fadeIn(set.fadeSpeed)
+        .addClass("show");
+      // The Dots
+      $slider.find("> ul").find(".showli").removeClass("showli");
+      $slider.find("> ul > li").eq(position).addClass("showli");
+    }
+
+    return $slider;
+  };
+})(jQuery);
+
+$(document).ready(function() {
+  
+  $("#slider1").sliderResponsive({
+  // Using default everything
+    slidePause: 5000,
+    fadeSpeed: 800,
+    autoPlay: "on",
+    showArrows: "off", 
+    hideDots: "off", 
+    hoverZoom: "on", 
+    titleBarTop: "off"
+  });
+
+  $('#slider2').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+  
+  
+}); 
+</script>
      
 
     </body>
