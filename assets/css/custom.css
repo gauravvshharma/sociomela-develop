@@ -536,6 +536,10 @@ body{
 .slick-slide {
   margin: 0px 20px;
 }
+.slick-slide img {
+  display: block;
+  width: 100%;
+}
 
 .customerSlider .slick-slide img {
   width: 70%;
