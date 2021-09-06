@@ -1,4 +1,7 @@
-
+body{
+  background-color: #fff;
+  display: block;
+}
 .logo-img{
   padding: 30px;
   width: 300px;
@@ -201,21 +204,8 @@
   background-size: cover; 
   background-position:center;
   position: relative;
-}
-
-.wrapper:before {
-  content: ' ';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
   height: 100%;
-  opacity: 0.6;
-  background-image: url($bg_img);
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
+  width: 100%;
 }
 
 .content {
@@ -301,73 +291,9 @@
 .p-10{
   padding: 10% !important;
 }
-  
-  /* Draggable cord */
-:root {
-    --on: 0;
-    --bg: hsl(calc(200 - (var(--on) * 160)), calc((20 + (var(--on) * 50)) * 1%), calc((20 + (var(--on) * 60)) * 1%));
-    --cord: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));
-    --stroke: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));
-    --shine: hsla(0, 0%, 100%, calc(0.75 - (var(--on) * 0.5)));
-    --cap: hsl(0, 0%, calc((40 + (var(--on) * 30)) * 1%));
-    --filament: hsl(45, calc(var(--on) * 80%), calc((25 + (var(--on) * 75)) * 1%));
-}
-body {
-    align-items: center;
-    justify-content: center;
-    background: var(--bg);
-    margin: 0;
-}
-.toggle-scene {
-    overflow: visible !important;
-    height: 50vmin;
-    z-index: 999;
-    position: relative;
-}
-.toggle-scene__cord {
-    stroke: var(--cord);
-    cursor: move;
-}
-.toggle-scene__cord:nth-of-type(1) {
-    display: none;
-}
-.toggle-scene__cord:nth-of-type(2), .toggle-scene__cord:nth-of-type(3), .toggle-scene__cord:nth-of-type(4), .toggle-scene__cord:nth-of-type(5) {
-    display: none;
-}
-.toggle-scene__cord-end {
-    stroke: var(--cord);
-    fill: var(--cord);
-}
-.toggle-scene__dummy-cord {
-    stroke-width: 6;
-    stroke: var(--cord);
-}
-.bulb__filament {
-    stroke: var(--filament);
-}
-.bulb__shine {
-    stroke: var(--shine);
-}
-.bulb__flash {
-    stroke: #f5e0a3;
-    display: none;
-}
-.bulb__bulb {
-    stroke: var(--stroke);
-    fill: hsla(calc(180 - (95 * var(--on))), 80%, 80%, calc(0.1 + (0.4 * var(--on))));
-}
-.bulb__cap {
-    fill: var(--cap);
-}
-.bulb__cap-shine {
-    fill: var(--shine);
-}
-.bulb__cap-outline {
-    stroke: var(--stroke);
-}
 
 
-/* ---- tsparticles container ---- */
+/* ---- confetti container ---- */
 #tsparticles {
   background-position: center;
   background-size: cover;
@@ -378,6 +304,19 @@ body {
 }
 
 
+.image {
+  position: absolute;
+}
+
+.imageOne {
+  z-index: 0;
+}
+
+.imageTwo {
+  z-index: 1;
+}
+
+
 
 /* Portfolio slider */
 .portfolioSlider, 
@@ -385,9 +324,9 @@ body {
     /* Images default to Center Center. Maybe try 'center top'? */
     background-position: center top;
     display: block;
-    width: 337px;
-    height: 385px;
-    top: 5%;
+    width: 377px;
+    height: 400px;
+    top: 14.5%;
     left: 1%;
     background-size: contain; 
     margin:0 auto;
@@ -406,7 +345,7 @@ body {
 
 .slider-bg {
   position: absolute;
-  top: -10%;
+  z-index: 1;
 }
 
 .portfolioSlider > i {
@@ -598,14 +537,18 @@ body {
   margin: 0px 20px;
 }
 
-.slick-slide img {
+.customerSlider .slick-slide img {
   width: 70%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 999;
 }
 
 .slick-slider
 {
   position: relative;
   display: block;
+  z-index: 999;
   box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
