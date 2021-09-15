@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 <!-- Custom CSS -->
 <link rel="stylesheet" type="text/css" href="assets/css/custom.css"/> 
+<link rel="stylesheet" href="assets/css/jquery.bxslider.css">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
@@ -169,10 +170,14 @@
             <div class="row">
               <div class="col-lg-8 text-content p-5">
                 <img src="assets/img/Text2.png" class="image-responsive pb-0"/>
-                <h1>Creativity</h1>
+                <div class="bxslider" id="whatSetsUsApart">
+                  <div><img src="assets/img/slider_text/what_sets_us_apart/1.png"></div>
+                  <div><img src="assets/img/slider_text/what_sets_us_apart/2.png"></div>
+                  <div><img src="assets/img/slider_text/what_sets_us_apart/3.png"></div>
+                </div>
               </div>
                 <div class="col-lg-4">
-                  <video  class="video-responsive" autoplay muted>
+                  <video  class="video-responsive" autoplay muted loop>
                     <source src="assets/img/monkey.mp4" type="video/mp4" class="video-responsive">
                    </video>
                    <script>
@@ -200,13 +205,17 @@
       </div>
       <div class="row">
         <div class="col-lg-6">
-          <video autoplay muted class="video-responsive">
+          <video autoplay loop muted class="video-responsive">
             <source src="assets/img/Girl-Balancing-transparent.mp4" type="video/mp4">
            </video>
           </div>
         <div class="col-lg-6 text-content">
           <img src="assets/img/Text3.png" class="image-responsive pb-0"/>
-          <h1>Deliver Perfection</h1>
+          <div class="bxslider" id="whatDoWeDo">
+            <div><img src="assets/img/slider_text/what_do_we_do/1.png"></div>
+            <div><img src="assets/img/slider_text/what_do_we_do/2.png"></div>
+            <div><img src="assets/img/slider_text/what_do_we_do/3.png"></div>
+          </div>
         </div>
         </div>
          </div>
@@ -228,56 +237,48 @@
         <div class="col-lg-6">
           <img src="assets/img/Text4.png" class="image-responsive">
         </div>
-        <div class="col-lg-6 text-content">
-
-          <div class="slider-bg">
-            <img src="assets/img/Screen.png" class="image-responsive p-0"/>
-            <img src="assets/img/Lights.png" class="image-responsive" style="position: relative; top: -350px;"/>
+        <div class="col-lg-5 offset-lg-1">
+          <div class="slider">
+            <div class="bxslider" id="portfolio">
+              <div>
+                <video autoplay muted loop>
+                  <source type="video/mp4" src="assets/img/slider_img/2-1.mp4" class="image-responsive">
+                </video>
+              </div>
+              <div>
+                <video autoplay muted loop>
+                  <source type="video/mp4" src="assets/img/slider_img/1.mp4" class="image-responsive">
+                </video>
+              </div>
+              <div>
+                <video autoplay muted loop>
+                  <source type="video/mp4" src="assets/img/slider_img/7.mp4" class="image-responsive">
+                </video>
+              </div>
+              <div><img src="assets/img/slider_img/2.jpg"></div>
+              <div><img src="assets/img/slider_img/6.jpg"></div>
+              <div><img src="assets/img/slider_img/51.jpg"></div>
+              <div>
+                <video autoplay muted loop>
+                  <source type="video/mp4" src="assets/img/slider_img/10.mp4" class="image-responsive">
+                </video>
+              </div>
+              <div><img src="assets/img/slider_img/83.jpg"></div>
+              <div>
+                <video autoplay muted loop>
+                  <source type="video/mp4" src="assets/img/slider_img/9.mp4" class="image-responsive">
+                </video>
+              </div>
+              <div><img src="assets/img/slider_img/hoc.jpg"></div>
+            </div>
           </div>
-          <!-- Slider 1 -->
-  <div class="slider portfolioSlider" id="slider1">
-  <!-- Slides -->
-  <!-- <div class="slide">
-    <img data-lazy="assets/img/slider_img/2-1.mp4"/>
+          <div class="slider-bg">
+            <img src="assets/img/Lights.png" class="image-responsive p-0 spotlights"/>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="slide">
-    <img data-lazy="assets/img/slider_img/1.mp4"/>
-  </div> -->
-  <div class="slide">
-    <img data-lazy="assets/img/slider_img/2.jpg"/>
-  </div>
-  <div class="slide">
-    <img data-lazy="assets/img/slider_img/6.jpg"/>
-  </div>
-  <div class="slide">
-    <img data-lazy="assets/img/slider_img/8.jpg"/>
-  </div>
-  <div class="slide">
-    <img data-lazy="assets/img/slider_img/51.jpg"/>
-  </div>
-  <div class="slide">
-    <img data-lazy="assets/img/slider_img/83.jpg"/>
-  </div>
-  <div class="slide">
-    <img data-lazy="assets/img/slider_img/hoc.jpg"/>
-  </div>
-  <!-- <div class="slide">
-    <img data-lazy="assets/img/slider_img/10.mp4"/>
-  </div>
-  <div class="slide">
-    <img data-lazy="assets/img/slider_img/7.mp4"/>
-  </div>
-  <div class="slide">
-    <img data-lazy="assets/img/slider_img/9.mp4"/>
-  </div> -->
-  <!-- The Arrows -->
-  <i class="left" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100" fill="#222222"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path></svg></i>
-  <i class="right" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100" fill="#222222"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path></svg></i>
-</div>
-</div>  
-</div>
-</div>
-</div>
 </section>
 
 <!-- Section 6 -->
@@ -289,10 +290,10 @@
       </div>                         
       <section class="customerSlider slider"  id="slider2">
         <div class="slide">
-          <img data-lazy="assets/img/client_img/24x7 salon.png">
+          <img data-lazy="assets/img/client_img/24x7_salon.png">
         </div>
         <div class="slide">
-          <img data-lazy="assets/img/client_img/Ad tech.png">
+          <img data-lazy="assets/img/client_img/Ad_tech.png">
         </div>
         <div class="slide">
           <img data-lazy="assets/img/client_img/Blackbucks.png">
@@ -310,11 +311,40 @@
           <img data-lazy="assets/img/client_img/TOB.png">
         </div>
         <div class="slide">
-          <img data-lazy="assets/img/client_img/Tandoor villa.png">
+          <img data-lazy="assets/img/client_img/Tandoor_villa.png">
         </div>
      </section>
     </div>
   </div>
+</section>
+
+<section class="services">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="text-content">
+      <h1>OUR SERVICES</h1>
+      <p>photo is to be added</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-8">
+    <div class="text-round">
+      <img src=""/>
+    </div>
+  </div>
+  <div class="col-lg-4">
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-4">
+  </div>
+  <div class="col-lg-8">
+    <div class="text-round">
+      <img src=""/>
+    </div>
+  </div>
+</div>
 </section>
 
         <!-- Custom JS -->
@@ -325,6 +355,7 @@
         <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.25.0" type="text/javascript" ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/tsparticles-shape-confetti@1.10.0" type="text/javascript" ></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
 
         <script>
@@ -417,16 +448,9 @@ emitters: {
 
     <script>
  $(document).ready(function(){      
-$('.portfolioSlider').slick({
-  lazyLoad: 'ondemand',
-  autoplay: true,
-  infinite: true,
-  arrows: false,
-});
-
 $('.customerSlider').slick({
   lazyLoad: 'ondemand',
-  slidesToShow: 3,
+  slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
   dots: false,
@@ -434,6 +458,38 @@ $('.customerSlider').slick({
   infinite: true,
   autoplaySpeed: 1500,
 });
+});
+    </script>
+
+    <script>
+      $(function(){
+  $('#portfolio').bxSlider({
+    mode: 'fade',
+    speed: 300,
+    controls: true,
+    dots: false,
+    auto: true,
+
+  });
+  $('#whatSetsUsApart').bxSlider({
+    mode: 'fade',
+    speed: 300,
+    slideWidth: 300,
+    dots: false,
+    auto: true,
+
+  });
+
+  $('#whatDoWeDo').bxSlider({
+    mode: 'fade',
+    speed: 300,
+    slideWidth: 300,
+    dots: false,
+    auto: true,
+
+  });
+
+
 });
     </script>
   </body>
