@@ -1,74 +1,646 @@
+<!DOCTYPE html>
 <html>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SocioMela - Coming Soon</title>
-    
 <head>
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script type="text/javascript" src="assets/js/jquery.min.js"></script>
-<style>
-    @media (min-width: 400px) {
-    .background {
-        background-image: url('assets/img/Mobile-Banner.jpg');
-    }
+  <style>
+  .slick-slide img {
+  display: block;
+  width: 100%;
 }
-
-@media (min-width: 500px) {
-    .background {
-        background-image: url('assets/img/Mobile-Banner.jpg');
-    }
-}
-
-@media (min-width: 600px) {
-    .background {
-        background-image: url('assets/img/Landing-Page_Web.jpg');
-    }
-}
-</style>
+  </style>
+<!-- Latest compiled and minified Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<!-- Custom CSS -->
+<link rel="stylesheet" type="text/css" href="assets/css/custom.css"/> 
+<link rel="stylesheet" href="assets/css/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
-	<section class="hero is-transparent is-fullheight ">
-		<div class="hero-head">
-			<header class="navbar">
-				<div class="container">
-					<div class="navbar-brand">
-						
-					</div>
-				
-				</div>
-			</header>
-		</div>
 
-		
-		
-		<!-- <div class="hero-foot">
-			<div class="columns has-text-centered">
-				<div class="column">
-					<div class="container">
-						<ul>
-							<li>
-								<a href="#">Twitter</a>
-							</li>
-							<li>
-								<a href="#">Facebook</a>
-							</li>
-							<li>
-								<a href="#">YouTube</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div> -->
-	</section>
+    <div class="rxWorld">
+        
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+        <section class="rnOuter" id="bottomlayer" style="display: block;">
+          <div class="wrapper">
+            <div class="imageOne image"><img src="./assets/img/Tent.png" class="one"></div>
+            <div class="imageTwo image"><img src="./assets/img/Sise Flag.png" class="two"></div>
+            
+            <!-- confetti -->
+          <div id="tsparticles">
+            <div class="logo">
+              <a href="/"><img src="assets/img/logo.png" class="logo-img"></a>
+            </div>
+          </div>
+        </div>
+          <section class="aoTable">
+            <!-- <svg class="toggle-scene" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMinYMin" viewBox="0 0 197.451 481.081">
+                <defs>
+                  <marker id="e" orient="auto" overflow="visible" refx="0" refy="0">
+                    <path class="toggle-scene__cord-end" fill-rule="evenodd" stroke-width=".2666" d="M.98 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+                  </marker>
+                  <marker id="d" orient="auto" overflow="visible" refx="0" refy="0">
+                    <path class="toggle-scene__cord-end" fill-rule="evenodd" stroke-width=".2666" d="M.98 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+                  </marker>
+                  <marker id="c" orient="auto" overflow="visible" refx="0" refy="0">
+                    <path class="toggle-scene__cord-end" fill-rule="evenodd" stroke-width=".2666" d="M.98 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+                  </marker>
+                  <marker id="b" orient="auto" overflow="visible" refx="0" refy="0">
+                    <path class="toggle-scene__cord-end" fill-rule="evenodd" stroke-width=".2666" d="M.98 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+                  </marker>
+                  <marker id="a" orient="auto" overflow="visible" refx="0" refy="0">
+                    <path class="toggle-scene__cord-end" fill-rule="evenodd" stroke-width=".2666" d="M.98 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+                  </marker>
+                  <clippath id="g" clippathunits="userSpaceOnUse">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4.677" d="M-774.546 827.629s12.917-13.473 29.203-13.412c16.53.062 29.203 13.412 29.203 13.412v53.6s-8.825 16-29.203 16c-21.674 0-29.203-16-29.203-16z"></path>
+                  </clippath>
+                  <clippath id="f" clippathunits="userSpaceOnUse">
+                    <path d="M-868.418 945.051c-4.188 73.011 78.255 53.244 150.216 52.941 82.387-.346 98.921-19.444 98.921-47.058 0-27.615-4.788-42.55-73.823-42.55-69.036 0-171.436-30.937-175.314 36.667z"></path>
+                  </clippath>
+                </defs>
+                <g class="toggle-scene__cords aoTableCell" style="background-image: url('assets/img/banner.jpg');">
+                  <path class="toggle-scene__cord" marker-end="url(#a)" fill="none" stroke-linecap="square" stroke-width="6" d="M123.228-28.56v150.493" transform="translate(-24.503 256.106)"></path>
+                  <path class="toggle-scene__cord" marker-end="url(#a)" fill="none" stroke-linecap="square" stroke-width="6" d="M123.228-28.59s28 8.131 28 19.506-18.667 13.005-28 19.507c-9.333 6.502-28 8.131-28 19.506s28 19.507 28 19.507" transform="translate(-24.503 256.106)"></path>
+                  <path class="toggle-scene__cord" marker-end="url(#a)" fill="none" stroke-linecap="square" stroke-width="6" d="M123.228-28.575s-20 16.871-20 28.468c0 11.597 13.333 18.978 20 28.468 6.667 9.489 20 16.87 20 28.467 0 11.597-20 28.468-20 28.468" transform="translate(-24.503 256.106)"></path>
+                  <path class="toggle-scene__cord" marker-end="url(#a)" fill="none" stroke-linecap="square" stroke-width="6" d="M123.228-28.569s16 20.623 16 32.782c0 12.16-10.667 21.855-16 32.782-5.333 10.928-16 20.623-16 32.782 0 12.16 16 32.782 16 32.782" transform="translate(-24.503 256.106)"></path>
+                  <path class="toggle-scene__cord" marker-end="url(#a)" fill="none" stroke-linecap="square" stroke-width="6" d="M123.228-28.563s-10 24.647-10 37.623c0 12.977 6.667 25.082 10 37.623 3.333 12.541 10 24.647 10 37.623 0 12.977-10 37.623-10 37.623" transform="translate(-24.503 256.106)"></path>
+                  <g class="line toggle-scene__dummy-cord">
+                    <line marker-end="url(#a)" x1="98.7255" x2="98.7255" y1="240.5405" y2="380.5405"></line>
+                  </g>
+                  <circle class="toggle-scene__hit-spot" cx="98.7255" cy="380.5405" r="60" fill="transparent"></circle>
+                </g>
+               
+              </svg> -->
+        </section>
+            
+            <div class='rnLeft' id="leftlayer">
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+                <div class='rnUnit'></div>
+            </div>
+            
+            <div class="rnRight" id="rightlayer">
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+              <div class='rnUnit'></div>
+            </div>
+        </section>
 
-    </html>
+      <section class="wrapper" style="background-image: url();">
+        <div class="content">
+
+         <!-- Section 2 -->
+         <div class="fun">
+          <img src="assets/img/Let's-Fun-Begin.gif">
+         </div>
+    
+         <!-- Section 3 -->
+         <div class="brand">
+        <div class="floating balloon1">
+          <img src="assets/img/3rd_balloon.png" alt="Balloon"/>
+        </div>
+        <div class="floating balloon2">
+          <img src="assets/img/1st_balloon.png" alt="Balloon" style="width:100px"/>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+              <img src="assets/img/Magician-Gif.gif" class="video-responsive">
+            </div>
+            <div class="col-lg-8">
+              <img src="assets/img/Text.png" class="image-responsive"/>
+            </div>
+            <div class="floating balloon3">
+              <img src="assets/img/2nd_balloon.png" alt="Balloon" style="width:35px"/>
+            </div>
+        </div>
+         </div>  
+
+         <!-- Section 4 -->
+         <div class="brand">
+            <div class="floating balloon1">
+              <img src="assets/img/3rd_balloon.png" alt="Balloon"/>
+            </div>
+            <div class="floating balloon4">
+              <img src="assets/img/1st_balloon.png" alt="Balloon" style="width:100px"/>
+            </div>
+            <div class="row">
+              <div class="col-lg-8 text-content p-5">
+                <img src="assets/img/Text2.png" class="image-responsive pb-0"/>
+                <div class="bxslider" id="whatSetsUsApart">
+                  <div><img src="assets/img/slider_text/what_sets_us_apart/1.png"></div>
+                  <div><img src="assets/img/slider_text/what_sets_us_apart/2.png"></div>
+                  <div><img src="assets/img/slider_text/what_sets_us_apart/3.png"></div>
+                </div>
+              </div>
+                <div class="col-lg-4">
+                  <video  class="video-responsive" autoplay muted loop>
+                    <source src="assets/img/monkey.mp4" type="video/mp4" class="video-responsive">
+                   </video>
+                   <script>
+                    document.getElementByClassName('.video-responsive').play();
+                </script>
+                </div>
+                <div class="floating balloon5">
+                  <img src="assets/img/2nd_balloon.png" alt="Balloon" style="width:35px"/>
+                </div>
+            </div>
+         </div>  
+
+        </div>
+      </section>
+    
+     <!-- Section 5 -->
+     <section class="wrapper">
+      <div class="content">
+         <div class="brand">
+      <div class="floating balloon1">
+        <img src="assets/img/3rd_balloon.png" alt="Balloon"/>
+      </div>
+      <div class="floating balloon2">
+        <img src="assets/img/1st_balloon.png" alt="Balloon" style="width:100px"/>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <video autoplay loop muted class="video-responsive">
+            <source src="assets/img/Girl-Balancing-transparent.mp4" type="video/mp4">
+           </video>
+          </div>
+        <div class="col-lg-6 text-content">
+          <img src="assets/img/Text3.png" class="image-responsive pb-0"/>
+          <div class="bxslider" id="whatDoWeDo">
+            <div><img src="assets/img/slider_text/what_do_we_do/1.png"></div>
+            <div><img src="assets/img/slider_text/what_do_we_do/2.png"></div>
+            <div><img src="assets/img/slider_text/what_do_we_do/3.png"></div>
+          </div>
+        </div>
+        </div>
+         </div>
+       </div>
+     </section>
+
+         
+     <!-- Section 5 -->
+     <section class="wrapper" style="background-image: url('assets/img/Roller.png'); margin-top: 60px;">
+      <div class="content">
+         <div class="brand">
+          <div class="floating balloon1" style="top:15px">
+            <img src="assets/img/3rd_balloon.png" alt="Balloon"/>
+          </div>
+          <div class="floating balloon4">
+            <img src="assets/img/1st_balloon.png" alt="Balloon" style="width:100px"/>
+          </div>
+       <div class="row">
+        <div class="col-lg-6">
+          <img src="assets/img/Text4.png" class="image-responsive">
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <div class="slider">
+            <div class="bxslider" id="portfolio">
+              <div>
+                <video autoplay muted loop>
+                  <source type="video/mp4" src="assets/img/slider_img/2-1.mp4" class="image-responsive">
+                </video>
+              </div>
+              <div>
+                <video autoplay muted loop>
+                  <source type="video/mp4" src="assets/img/slider_img/1.mp4" class="image-responsive">
+                </video>
+              </div>
+              <div>
+                <video autoplay muted loop>
+                  <source type="video/mp4" src="assets/img/slider_img/7.mp4" class="image-responsive">
+                </video>
+              </div>
+              <div><img src="assets/img/slider_img/2.jpg"></div>
+              <div><img src="assets/img/slider_img/6.jpg"></div>
+              <div><img src="assets/img/slider_img/51.jpg"></div>
+              <div>
+                <video autoplay muted loop>
+                  <source type="video/mp4" src="assets/img/slider_img/10.mp4" class="image-responsive">
+                </video>
+              </div>
+              <div><img src="assets/img/slider_img/83.jpg"></div>
+              <div>
+                <video autoplay muted loop>
+                  <source type="video/mp4" src="assets/img/slider_img/9.mp4" class="image-responsive">
+                </video>
+              </div>
+              <div><img src="assets/img/slider_img/hoc.jpg"></div>
+            </div>
+          </div>
+          <div class="slider-bg">
+            <img src="assets/img/Lights.png" class="image-responsive p-0 spotlights"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6 -->
+<section class="client-wrapper" style="background-image: url('assets/img/BG.jpg');">
+  <div class="row">
+    <div class="col-lg-12">     
+      <div class="client_text">
+        <img src="assets/img/client_text.png" class="image-responsive">
+      </div>                         
+      <section class="customerSlider slider"  id="slider2">
+        <div class="slide">
+          <img data-lazy="assets/img/client_img/24x7_salon.png">
+        </div>
+        <div class="slide">
+          <img data-lazy="assets/img/client_img/Ad_tech.png">
+        </div>
+        <div class="slide">
+          <img data-lazy="assets/img/client_img/Blackbucks.png">
+        </div>
+        <div class="slide">
+          <img data-lazy="assets/img/client_img/Chaichun.png">
+        </div>
+        <div class="slide">
+          <img data-lazy="assets/img/client_img/Garudda.png">
+        </div>
+        <div class="slide">
+          <img data-lazy="assets/img/client_img/Pizza.png">
+        </div>
+        <div class="slide">
+          <img data-lazy="assets/img/client_img/TOB.png">
+        </div>
+        <div class="slide">
+          <img data-lazy="assets/img/client_img/Tandoor_villa.png">
+        </div>
+     </section>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="text-content">
+      <img src="assets/img/Our_services_text.png" class="img-responsive p-5">
+    </div>
+  </div>
+</div>
+<!-- Balloons -->
+<div class="floating balloon1">
+  <img src="assets/img/3rd_balloon.png" alt="Balloon">
+</div>
+<div class="floating balloon4">
+  <img src="assets/img/1st_balloon.png" alt="Balloon" style="width:100px">
+</div>
+<!-- Branding -->
+<div class="row">
+  <div class="col-lg-8">
+    <div class="img-round float-right">
+      <img src="assets/img/branding.png"/>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="gif-round float-left">
+      <img src="assets/img/Elephant.gif" class="video-responsive">
+    </div>
+  </div>
+</div>
+
+<div class="content-spacer-xl"></div>
+<!-- Web and Development -->
+<div class="row">
+  <div class="col-lg-4">
+    <div class="video-round float-right">
+      <video  class="video-responsive" autoplay muted loop>
+        <source src="assets/img/Character.mp4" type="video/mp4" class="video-responsive">
+       </video>
+    </div>
+  </div>
+  <div class="col-lg-8">
+    <div class="img-round float-right">
+      <img src="assets/img/Web_and_Development.png"/>
+    </div>
+  </div>
+</div>
+
+  <div class="content-spacer-xl"></div>
+  <!-- Social Media -->
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="img-round float-right">
+        <img src="assets/img/Social_media.png"/>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="video-round float-right" style="left: 0;">
+        <video  class="video-responsive" autoplay muted loop>
+          <source src="assets/img/Magician.mp4" type="video/mp4" class="video-responsive">
+         </video>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-spacer-xl"></div>
+  <!-- Content Marketing -->
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="video-round float-right" style="top: 0"> 
+        <video  class="video-responsive" autoplay muted loop>
+          <source src="assets/img/Rope_jump.mp4" type="video/mp4" class="video-responsive">
+         </video>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="img-round float-right">
+        <img src="assets/img/Content_Marketing.png"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-spacer-xl"></div>
+  <!-- SEO -->
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="img-round float-right">
+        <img src="assets/img/SEO.png"/>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="video-round float-right" style="left: 0;">
+        <video  class="video-responsive" autoplay muted loop>
+          <source src="assets/img/pnghut_lion-taming-circus-clip-art-recreation-vector.mp4" type="video/mp4" class="video-responsive">
+         </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="content-spacer-xl"></div>
+
+<section class="wave">
+    <div class="row">
+      <div class="col-lg-12">
+        <!--Waves Container-->
+        <div>
+          <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(134,4,78,255)" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(133,3,77,255)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(157,9,71,255)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(165,9,70,255)" />
+          </g>
+          </svg>
+       </div>
+       <!--Waves end-->
+       <footer>
+       <div class="footer">
+         <div class="row">
+           <div class="col-lg-4">
+            <div class="footer-content">
+              <img src="assets/img/Book-us-now.png">
+            </div>
+           </div>
+           <div class="col-lg-8">
+            <div class="text-content">
+              <img src="assets/img/footer_text.png" class="img-responsive" style="padding: 0% 15%;">
+            </div>
+            <div class="form-content">
+              <form id="contactform" method="post" action="mail.php">
+                               
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                        <input name="name" class="form-control" type="text" placeholder="Name">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                      <div class="form-group">
+                        <input name="phone"  type="text" class="form-control" placeholder="Phone No.">
+                      </div>
+                    </div>
+                  </div>  
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <input name="email" class="form-control required email" type="text" placeholder="Email Address">
+                      </div>
+                    </div>
+                  </div> 
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <textarea rows="3" name="message" id="message" class="form-control required"  placeholder="Ok, a project brief please"></textarea>
+                      </div>
+                    </div>
+                  </div> 
+                
+                <div class="text-center">
+                    <button class="btn btn-dark" type="submit">SEND</button>
+                </div>
+                <div id="result"></div>
+              </form>
+            </div>
+          </div>
+         </div>
+         <div class="content-spacer-xl"></div>
+         <div class="copyright">
+          <p>&copy; <script>document.write(new Date().getFullYear())</script> SocioMela, All rights reserved.</p>
+        </div>
+       </div>
+       
+      </footer>
+    </div>
+</section>
+
+        <!-- Custom JS -->
+        <script src="assets/js/custom.js" type="text/javascript"></script>
+        <!-- Latest compiled and minified Bootstrap JavaScript -->
+        <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+        <!-- Vendor CSS -->
+        <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.25.0" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/tsparticles-shape-confetti@1.10.0" type="text/javascript" ></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+
+        <script>
+          tsParticles.load("tsparticles", {
+fpsLimit: 30,
+particles: {
+  number: {
+    value: 0
+  },
+  color: {
+    value: ["#00FFFC", "#FC00FF", "#fffc00", "ffffff"]
+  },
+  shape: {
+    type: "confetti",
+    options: {
+      confetti: {
+        type: ["circle", "square"]
+      }
+    }
+  },
+  opacity: {
+    value: 1,
+    animation: {
+      enable: true,
+      minimumValue: 0,
+      speed: 2,
+      startValue: "max",
+      destroy: "min"
+    }
+  },
+  size: {
+    value: 7,
+    random: {
+      enable: true,
+      minimumValue: 3
+    }
+  },
+  links: {
+    enable: false
+  },
+  life: {
+    duration: {
+      sync: true,
+      value: 5
+    },
+    count: 1
+  },
+  move: {
+    enable: true,
+    gravity: {
+      enable: true,
+      acceleration: 20
+    },
+    speed: 20,
+    decay: 0.1,
+    direction: "none",
+    random: false,
+    straight: false,
+    outModes: {
+      default: "destroy",
+      top: "none"
+    }
+  }
+},
+interactivity: {
+  detectsOn: "window",
+  events: {
+    resize: true
+  }
+},
+detectRetina: true,
+emitters: {
+  direction: "none",
+  life: {
+    count: 0,
+    duration: 0.1,
+    delay: 0.4
+  },
+  rate: {
+    delay: 0.1,
+    quantity: 100
+  },
+  size: {
+    width: 0,
+    height: 0
+  }
+}
+});
+        </script>
+
+    <script>
+ $(document).ready(function(){      
+$('.customerSlider').slick({
+  lazyLoad: 'ondemand',
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  dots: false,
+  arrows: false,
+  infinite: true,
+  autoplaySpeed: 1500,
+});
+});
+    </script>
+
+    <script>
+      $(function(){
+  $('#portfolio').bxSlider({
+    mode: 'fade',
+    speed: 300,
+    controls: true,
+    dots: false,
+    auto: true,
+
+  });
+  $('#whatSetsUsApart').bxSlider({
+    mode: 'fade',
+    speed: 300,
+    slideWidth: 300,
+    dots: false,
+    auto: true,
+
+  });
+
+  $('#whatDoWeDo').bxSlider({
+    mode: 'fade',
+    speed: 300,
+    slideWidth: 300,
+    dots: false,
+    auto: true,
+
+  });
+
+
+});
+    </script>
+  </body>
+</html>
