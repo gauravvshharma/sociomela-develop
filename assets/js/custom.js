@@ -1,14 +1,13 @@
-// Curtains JS
-      $(document).ready(function(){
-        $("#bottomlayer").hover(function(){
-        $("#leftlayer").addClass("hideMe");
-        $("#rightlayer").addClass("hideMe");
-        }, function(){
-         $("#leftlayer").addClass("hideMe");
-         $("#rightlayer").addClass("hideMe");
-        });
-      });
 
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 0) {
+    $('#leftlayer').fadeOut();
+    $('#rightlayer').fadeOut();
+  } else {
+    $('#leftlayer').fadeIn();
+    $('#rightlayer').fadeIn();
+  }
+});
 // Portfolio Slider JS
 $(document).ready(function(){
 "use strict";
